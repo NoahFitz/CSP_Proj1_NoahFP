@@ -55,9 +55,9 @@ def Radius(d):
     return r1, r2
 def DeltaT(d):
     v1 = Velocity(d)[0]/(Radius(d)[0])
-    Dt1 = (np.pi/180)/v1
+    Dt1 = (np.pi/1800)/v1
     v2 = Velocity(d)[1]/(Radius(d)[1])
-    Dt2 = (np.pi/180)/v2
+    Dt2 = (np.pi/1800)/v2
     return Dt1, Dt2
 def TimeElapsed(D):
     d=0
@@ -79,13 +79,12 @@ def Distance(T):
     t=0
     d1=0
     d2=0
-    T=T
     while t<T:
-        d1 = d1 + 1
+        d1 = d1 + 0.1
         t = t + DeltaT(d1)[0]
     t=0
     while t<T:
-        d2 = d2 + 1
+        d2 = d2 + 0.1
         t = t + DeltaT(d2)[1]
     return d1, d2
 def DistanceLong(T):
@@ -128,8 +127,8 @@ def Difference(T):
 
 
 
-t = 180*86400
-#print(Distance(t)[0], Distance(t)[1])
+t = 3*86400
+print(Distance(t)[0], Distance(t)[1])
 #print(TimeElapsed(2))
 #print(Velocity(1)[0], Velocity(1)[1])
 #print(XandY(3)[0]*10**-10, XandY(3)[1]*10**-10, XandY(3)[2]*10**-10, XandY(3)[3]*10**-10)
