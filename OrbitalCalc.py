@@ -60,8 +60,8 @@ def TimeElapsed(D):
 
 def Distance(T):
     t=0
-    d1=0
-    d2=0
+    d1=195 #approximated based on the position on 3/31/2021 based on the app "Solar System Scope"
+    d2=110 #approximated based on the position on 3/31/2021 based on the app "Solar System Scope"
     while t<T:
         d1 = d1 + 0.1
         t = t + DeltaT(d1)[0]
