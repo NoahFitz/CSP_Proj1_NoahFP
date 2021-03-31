@@ -1,0 +1,55 @@
+\documentclass{article}
+\title{Procedures}
+\begin{document}
+\section{Equations from Kepler's Laws}
+\subsection{Determining Tangential Velocity Given r and Position Given $\theta$}
+\label{VelocitySection}
+The first step in modeling the orbits of Earth and Mars was to find their tangential velocity at a given radius from
+the centre of their elliptical orbit. This was determined using Kepler's law of areas, and one of its resulting 
+equations (equations (\ref{Kepler3}) and (\ref{dAandV})), both found in Classical Mechanics by Taylor sections 3.5 and 
+8.6, and resulted in equation(\ref{Velocity}) - the equation for L (equation (\ref{L})) was taken from the Georgia State University website in which the eccentricities and semi-major axis values were provided. 
+\begin{equation}
+	\frac{dA}{dt} = \frac{1}{2}rv_{\theta}
+	\label{Kepler3}
+\end{equation}
+\begin{equation}
+	\frac{dA}{dt} = \frac{L}{2\mu}
+	\label{dAandV}
+\end{equation}
+\begin{equation}
+	L =\mu\sqrt{GMa(1-e^2)}
+	\label{L}
+\end{equation}
+\begin{equation}
+	v_{\theta} = \frac{\sqrt{GMa(1-e^2)}}{r}
+	\label{Velocity}
+\end{equation}
+Equation (\ref{ellipse}) was formed through reference to Classical Mechanics by Taylor secton 8.6. 
+Equation (\ref{Radius}) was taken from the Georigia State website. Equation (\ref{difference}) was based on common
+knowledge. 
+\begin{equation}
+	\frac{x^2}{a^2}+\frac{y^2}{b^2} = 1
+\end{equation}
+\begin{equation}
+	\frac{b}{a} = \sqrt{1-e^2}
+\end{equation}
+\begin{equation}
+	\frac{x^2}{a^2}+\frac{y^2}{a^2(1-e^2)} = 1
+	\label{ellipse}
+\end{equation}
+\begin{equation}
+	r(\theta) = \frac{a(1-e^2)}{1+ecos(\theta)}
+	\label{Radius}
+\end{equation}
+\begin{equation}
+	d = \sqrt{(x_{2} - x_{1})^2-(y_{2}-y_{1})^2}, x = rcos(\theta), y = rsin(\theta)
+	\label{difference}
+\end{equation}
+\subsection{Approximating Position at Time t}
+In order to find an exact equation for position at time t, one would have to integrate a variation of Kepler's
+third law. This was initially attempted, but then abandoned in favor of an approximation using the equations listed in
+section \ref{VelocitySection}. First, functions were defined for equations (\ref{Velocity}) and (\ref{Radius}). Then, a funtion called DeltaT was used to approximate the time elapsed between two tenths of a degree. Next, a distance function was written which takes a inputed time and adds predetermined $\Delta$t's in a while-loop until it reaches the given time. As these chuncks of time are summed, the function also sums the degrees elapse; the sum of the degrees is the actual output of the function. 
+
+The results of the distance funtion and the radius function are then fed into a function which converts the polar coordinates to cartesian coordinates, and then into a function which determines the distance between the planets using equation (\ref{difference}).
+\section{}
+\end{document}
