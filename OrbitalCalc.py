@@ -9,21 +9,6 @@ def ReadOrbitalData(): #Takes in data for the two planets
     orbit_data = np.loadtxt('OrbitData.csv', delimiter =",", skiprows = 1)
     return orbit_data
 
-def Velocity(d):
-    G = 6.67430*(10**-11)#N*m^2/kg^2
-    M = 1.989*(10**30)#kg
-    e1 = ReadOrbitalData()[0][0]
-    e2 = ReadOrbitalData()[1][0]
-    a1 = ReadOrbitalData()[0][1]*10**10
-    a2 = ReadOrbitalData()[1][1]*10**10
-    deg = d
-    theta = (np.pi*deg)/18
-    r1 = (a1*(1-e1**2))/(1+e1*np.cos(theta))
-    vtheta1 = np.sqrt(G*M*a1*(1-e2**2))/r1
-    r2 = (a2*(1-e2**2))/(1+e2*np.cos(theta))
-    vtheta2 = np.sqrt(G*M*a2*(1-e2**2))/r2
-    return vtheta1, vtheta2
-
 def Radius(d):
     e1 = ReadOrbitalData()[0][0]
     e2 = ReadOrbitalData()[1][0]
@@ -34,6 +19,21 @@ def Radius(d):
     r1 = (a1*(1-e1**2))/(1+e1*np.cos(theta))
     r2 = (a2*(1-e2**2))/(1+e2*np.cos(theta))
     return r1, r2
+
+def Velocity(d):
+    G = 6.67430*(10**-11)#N*m^2/kg^2
+    M = 1.989*(10**30)#kg
+    e1 = ReadOrbitalData()[0][0]
+    e2 = ReadOrbitalData()[1][0]
+    a1 = ReadOrbitalData()[0][1]*10**10
+    a2 = ReadOrbitalData()[1][1]*10**10
+    deg = d
+    theta = (np.pi*deg)/180
+    r1 = Radius(d)[0]
+    vtheta1 = np.sqrt(G*M*a1*(1-e2**2))/r1
+    r2 = Radius(d)[1]
+    vtheta2 = np.sqrt(G*M*a2*(1-e2**2))/r2
+    return vtheta1, vtheta2
 
 def DeltaT(d):
     v1 = Velocity(d)[0]/(Radius(d)[0])
@@ -72,13 +72,9 @@ def Distance(T):
     return d1, d2
 
 def XandY(T):
-    e1 = ReadOrbitalData()[0][0]
-    e2 = ReadOrbitalData()[1][0]
-    a1 = ReadOrbitalData()[0][1]*10**10
-    a2 = ReadOrbitalData()[1][1]*10**10
     d1 = Distance(T)[0]
     x1 = Radius(d1)[0]*np.cos(d1)
-    y1 = Radius(d2)[0]*np.sin(d2)
+    y1 = Radius(d1)[0]*np.sin(d1)
     d2 = Distance(T)[1]
     x2 = Radius(d2)[1]*np.cos(d2)
     y2 = Radius(d2)[1]*np.sin(d2)
