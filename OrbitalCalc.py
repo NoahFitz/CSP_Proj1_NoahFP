@@ -60,8 +60,8 @@ def TimeElapsed(D):
 
 def Distance(T):
     t=0
-    d1=195 #approximated based on the position on 3/31/2021 based on the app "Solar System Scope"
-    d2=110 #approximated based on the position on 3/31/2021 based on the app "Solar System Scope"
+    d1=ReadOrbitalData()[0][2] #approximated based on the position on 3/31/2021 based on the app "Solar System Scope"
+    d2=ReadOrbitalData()[1][2] #approximated based on the position on 3/31/2021 based on the app "Solar System Scope"
     while t<T:
         d1 = d1 + 0.1
         t = t + DeltaT(d1)[0]
@@ -91,7 +91,7 @@ def Difference(T):
 
 #Test statements:
 #t = 3*86400
-#print(Distance(t)[0], Distance(t)[1])
+#print(Distance(1)[0], Distance(1)[1])
 #print(TimeElapsed(2))
 #print(Velocity(1)[0], Velocity(1)[1])
 #print(XandY(3)[0]*10**-10, XandY(3)[1]*10**-10, XandY(3)[2]*10**-10, XandY(3)[3]*10**-10)
