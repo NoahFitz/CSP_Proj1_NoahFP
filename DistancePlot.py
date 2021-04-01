@@ -5,9 +5,9 @@ import numpy as np
 def DistPlot():
     fig = plt.figure()
     fig.suptitle('Earth-Mars Distance over 20 days (Starting 3/31/2021)')
-    t = np.linspace(0,10,10)
+    t = np.linspace(0,20,20)
     D = np.array([])
-    for i in range(10):
+    for i in range(20):
         T = i*86400
         D = np.append(D, [Difference(T)*10**-10])
     plot(t, D, "k.")

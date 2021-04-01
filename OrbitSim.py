@@ -15,18 +15,24 @@ def GenerateOrbitalPlot(): #Plots an image of the two planets' orbits
     e2 = ReadOrbitalData()[1][0]
     a1 = ReadOrbitalData()[0][1]
     a2 = ReadOrbitalData()[1][1]
+    fig = plt.figure()
+    fig.suptitle('Orbits of Earth and Mars')
     x = np.linspace(0, 10, 100)
     y = np.linspace(0, 10, 100)
     width1 = 2 * a1 * np.sqrt(1-e1)
     height1 = 2 * a1
-    orbit1 = patches.Ellipse((a1*e1,0), width1, height1, angle=0, linewidth=2, fill=False)
+    orbit1 = patches.Ellipse((a1*e1,0), width1, height1, angle=0, linewidth=2, edgecolor = 'b', fill=False)
     width2 = 2 * a2 * np.sqrt(1-e2)
     height2 = 2 * a2
-    orbit2 = patches.Ellipse((a2*e2,0), width2, height2, angle=0, linewidth=2, fill=False)
+    orbit2 = patches.Ellipse((a2*e2,0), width2, height2, angle=0, linewidth=2, edgecolor = 'r', fill=False)
+    sun = patches.Circle((0,0), radius = 5, color="orange")
     ax = plt.gca()
     ax.add_patch(orbit1)
     ax.add_patch(orbit2)
+    ax.add_patch(sun)
     plt.axis("scaled")
+    plt.ylabel("Blue = Earth, Red = Mars, Orange = Sun")
+    plt.xlabel("Axes have units of 10^10 meters")
     savefig("EllipseTest2.png")
 
 GenerateOrbitalPlot()
