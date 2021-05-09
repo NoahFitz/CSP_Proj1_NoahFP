@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.11)  1 APR 2021 02:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.11)  5 MAY 2021 19:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -160,37 +160,30 @@ Overfull \hbox (25.02289pt too wide) in paragraph at lines 55--57
 [][]
  []
 
-) [8 <./VelocityError.png>]
-Underfull \hbox (badness 1924) in paragraph at lines 24--26
-\OT1/cmr/m/n/10 sity, 2016,http://hyperphysics.phy-astr.gsu.edu/hbase/hph.html.
- Ac-cessed
- []
+) (./CSPProject.bbl [8 <./VelocityError.png>]
 
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
-[]\OT1/cmr/m/n/10 INOVA. So-lar Sys-tem Scope. IN-OVA, 2010,
- []
-
-[9] (./CSPProject.aux) ) 
+) [9] (./CSPProject.aux) ) 
 Here is how much of TeX's memory you used:
- 1217 strings out of 483183
- 17831 string characters out of 5966292
+ 1221 strings out of 483183
+ 17879 string characters out of 5966292
  247733 words of memory out of 5000000
- 16259 multiletter control sequences out of 15000+600000
+ 16260 multiletter control sequences out of 15000+600000
  536593 words of font info for 38 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  30i,7n,25p,558b,210s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on CSPProject.pdf (9 pages, 236169 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cme
+x10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on CSPProject.pdf (9 pages, 235546 bytes).
 PDF statistics:
  85 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
